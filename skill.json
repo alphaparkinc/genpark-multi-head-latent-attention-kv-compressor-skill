@@ -1,0 +1,41 @@
+{
+  "name": "genpark-multi-head-latent-attention-kv-compressor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-head latent attention KV cache compressor implementing low-rank key-value projection and decoupled RoPE positional embeddings.",
+  "author": "genpark",
+  "category": "llm-architecture",
+  "tags": [
+    "deepseek-v3",
+    "mla",
+    "multi-head-latent-attention",
+    "kv-compression",
+    "long-context-acceleration"
+  ],
+  "inputs": {
+    "context_sequence_length": {
+      "type": "integer"
+    },
+    "num_attention_heads": {
+      "type": "integer"
+    },
+    "latent_compression_dimension": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "mla_compression_id": {
+      "type": "string"
+    },
+    "kv_compression_ratio_x": {
+      "type": "number"
+    },
+    "attention_reconstruction_fidelity_pct": {
+      "type": "number"
+    },
+    "rope_decoupled_projection_active": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
